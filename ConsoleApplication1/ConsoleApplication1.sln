@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTypes", "ValueTypes\ValueTypes.csproj", "{13C1975A-8E1A-4E4A-895B-133EAC1486FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{74812150-8BFD-4DC0-9E33-3E003471C423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{13C1975A-8E1A-4E4A-895B-133EAC1486FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C1975A-8E1A-4E4A-895B-133EAC1486FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C1975A-8E1A-4E4A-895B-133EAC1486FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74812150-8BFD-4DC0-9E33-3E003471C423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74812150-8BFD-4DC0-9E33-3E003471C423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74812150-8BFD-4DC0-9E33-3E003471C423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74812150-8BFD-4DC0-9E33-3E003471C423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
