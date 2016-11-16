@@ -44,5 +44,26 @@ namespace Generics
             result.Append("]");
             return result.ToString();
         }
+
+        public string ToString(Format<TItem> formatter)
+        {
+            var result = new StringBuilder();
+            result.Append("[");
+
+            var node = head;
+            while (node != null)
+            {
+                string itemAsString = formatter(node.Item);
+
+                result.Append(itemAsString);
+                result.Append(", ");
+
+                node = node.Next;
+            }
+
+            result.Append("]");
+            return result.ToString();
+        }
     }
+    public delegate string Format<T>(T item);
 }

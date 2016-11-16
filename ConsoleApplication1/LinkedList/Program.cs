@@ -1,40 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Generics
 {
-    class User
+    class User2
     {
         public string Name { get; set; }
+        public int AgeInYears { get; set; }
+
         public override string ToString()
         {
             return Name;
         }
-    }
 
+    }
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var names = new LinkedList<string>();
+            var users = new LinkedList<User2>();
 
-            names.AddToFront("Jens");
-            names.AddToFront("Hans");
-            names.AddToFront("Anders");
+            var hans = new User2
+            {
+                Name = "Hans",
+                AgeInYears = 30
+            };
 
-            Console.WriteLine(names.ToString());
 
-            var users = new LinkedList<User>();
+            users.AddToFront(hans);
+            Console.WriteLine("default: " + users.ToString());
 
-            users.AddToFront(new User { Name = "Hans" });
-            Console.WriteLine(users.ToString());
+            Console.WriteLine("custom: " + users.ToString(FormatUser));
 
-            LinkedList<object> listOfObjects = new LinkedList<object>();
-            LinkedList<LinkedList<object>> listOfLists = new LinkedList<LinkedList<object>>();
-            //listOfLists.AddToFront(names); <- compile error
-            //listOfLists.AddToFront(users); <- compile error
-            listOfLists.AddToFront(listOfObjects); // allowed
+            string userAges = users.ToString((User2 u) => u.AgeInYears.ToString());
+            Console.WriteLine("age only: " + userAges);
 
             Console.ReadKey();
         }
+
+        static string FormatUser(User2 user)
+        {
+            return user.Name + " (" + user.AgeInYears + ")"; }
     }
 }

@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LinkedList.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="LinkedList.cs" />
+    <None Include="Program2cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
